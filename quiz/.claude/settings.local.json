@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm dev)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(npm install:*)"
+    ]
+  },
+  "disabledMcpjsonServers": [
+    "MATRIX MCP"
+  ],
+  "enabledMcpjsonServers": [
+    "MATRIX MCP"
+  ],
+  "enableAllProjectMcpServers": true
+}
