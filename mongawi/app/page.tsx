@@ -6,7 +6,7 @@ import { Sparkles, RefreshCw } from "lucide-react"
 import Image from "next/image"
 
 const CANDIDATES = ["ravi.lb", "colton.kim", "yell.ow", "vaughn.k", "mjet.plane"]
-const ANIMATION_DURATION = 7000 // 7 seconds
+const ANIMATION_DURATION = 10000 // 10 seconds
 
 function ChairmanFrames({ winner, isCompact }: { winner: string | null; isCompact: boolean }) {
   return (

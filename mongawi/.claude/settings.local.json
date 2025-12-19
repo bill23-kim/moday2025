@@ -8,5 +8,9 @@
   },
   "disabledMcpjsonServers": [
     "MATRIX MCP"
-  ]
+  ],
+  "enabledMcpjsonServers": [
+    "MATRIX MCP"
+  ],
+  "enableAllProjectMcpServers": true
 }

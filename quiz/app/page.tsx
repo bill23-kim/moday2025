@@ -40,7 +40,7 @@ export default function QuizBoard() {
   const [quizData, setQuizData] = useState<Quiz[]>([])
 
   useEffect(() => {
-    setQuizData(shuffleArray(quizzes))
+    setQuizData(quizzes)
   }, [])
 
   const playFallbackSound = (type: "click" | "typing") => {
@@ -305,7 +305,7 @@ export default function QuizBoard() {
         </div>
 
         <div className="grid grid-cols-4 gap-3 md:grid-cols-8 md:gap-4 lg:grid-cols-10">
-          {quizData.map((quiz) => {
+          {quizData.map((quiz, index) => {
             const isCompleted = completedQuizzes.has(quiz.id)
 
             return (
@@ -316,6 +316,7 @@ export default function QuizBoard() {
                 }`}
                 onClick={() => handleCardClick(quiz)}
               >
+                <span className="absolute left-1 top-1 text-xs text-muted-foreground">{index + 1}</span>
                 <div className="flex h-full w-full flex-col items-center justify-center p-2 text-center">
                   <span className="text-sm font-bold text-primary transition-colors md:text-base lg:text-lg">
                     {quiz.points === 50 && quiz.topic === "추리" ? "뺏 50점" : `${quiz.points}점`}
